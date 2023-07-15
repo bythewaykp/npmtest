@@ -1,5 +1,5 @@
 let test = () => {
-    return "hi";
+    return "hi2";
 };
 
 export { test };
