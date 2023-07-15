@@ -1,0 +1,41 @@
+{
+    "name": "@bythewaykp/npmtest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./lib/cjs/index.js",
+    "types": "./lib/cjs/types/index.d.ts",
+    "scripts": {
+        "dev": "ts-node ./script.ts",
+        "clean": "rm -rf ./lib",
+        "build": "npm run clean && npm run build:esm && npm run build:cjs",
+        "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+        "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+        "prepack": "npm run build",
+        "test": "mocha"
+    },
+    "keywords": [],
+    "files": [
+        "lib/**/*"
+    ],
+    "author": "",
+    "license": "ISC",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./lib/esm/types/index.d.ts",
+                "default": "./lib/esm/index.mjs"
+            },
+            "require": {
+                "types": "./lib/cjs/types/index.d.ts",
+                "default": "./lib/cjs/index.js"
+            }
+        }
+    },
+    "devDependencies": {
+        "@types/chai": "^4.3.5",
+        "@types/mocha": "^10.0.1",
+        "chai": "^4.3.7",
+        "mocha": "^10.2.0",
+        "ts-node": "^10.9.1"
+    }
+}
