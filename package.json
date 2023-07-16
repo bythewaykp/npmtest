@@ -1,6 +1,6 @@
 {
     "name": "@bythewaykp/npmtest",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Sample npm module developed for testing purposes",
     "main": "./lib/cjs/index.js",
     "types": "./lib/cjs/types/index.d.ts",
