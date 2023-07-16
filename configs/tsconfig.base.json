@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
         "strict": true,
+        "skipLibCheck": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "skipLibCheck": true,
         "checkJs": true,
         "allowJs": true,
         "declaration": true,
@@ -13,5 +13,5 @@
         // "allowImportingTsExtensions": true
     },
     // "files": ["../src/index.ts"]
-    "include": ["../src/**/*"]
+    "include": ["../src/**/*.ts"]
 }

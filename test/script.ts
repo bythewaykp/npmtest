@@ -1,4 +1,3 @@
-// import { test } from "../src/index";
-import { test } from '@bythewaykp/npmtest';
+import { test } from 'npmtest';
 
-console.log(test());
+console.log(test(5, 6));
