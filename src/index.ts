@@ -1,5 +1,4 @@
-let test = () => {
-    return "hi2";
+let test = (a: number, b: number): number => {
+    return a * b;
 };
-
 export { test };
